@@ -45,7 +45,7 @@ export function ProjectsSection() {
               />
               <IconLink
                 className="w-6 h-6"
-                href="https://martymitchell.dev/"
+                href="https://github.com/darkk-helmet/portfolio.git"
                 Icon={GithubIcon}
               />
               <IconLink
