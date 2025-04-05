@@ -16,7 +16,7 @@ export default {
       "2xl": "0 4px 32px 8px rgba(0, 0, 0, 0.15)",
     },
     fontSize: {
-      xs: [".0.694rem", {
+      xs: ["0.694rem", {
         lineHeight: "1.8",
         letterSpacing: "0em",
         fontWeight: '500',
