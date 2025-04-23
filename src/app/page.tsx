@@ -6,6 +6,7 @@ import { ExperienceSection } from "@/sections/home/experience";
 import { ProjectsSection } from "@/sections/home/projects";
 import Image from "next/image";
 import Link from "next/link";
+import { CONTACT_EMAIL } from "./globals";
 
 export default function Home() {
   return (
@@ -33,7 +34,7 @@ export default function Home() {
             </Text>
           </div>
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center h-16">
-            <Link className="w-56 md:w-64" href="mailto:inqueries@martymitchell.dev">
+            <Link className="w-56 md:w-64" href={`mailto:${CONTACT_EMAIL}`}>
               <Button className="inline w-full">Send me a message</Button>
             </Link>
             <div className="hidden md:inline w-[1px] h-full bg-gray-600" />

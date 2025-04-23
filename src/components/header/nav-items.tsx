@@ -3,6 +3,7 @@ import { Button, IconButton } from "../button";
 import { InteractiveTextLink } from "../link";
 import { CloseIcon, MenuIcon } from "../icons";
 import { useCallback, useEffect, useState } from "react";
+import { CONTACT_EMAIL } from "@/app/globals";
 
 export function NavItems() {
   const [darkenBg, setDarkenBg] = useState(false);
@@ -54,7 +55,7 @@ export function NavItems() {
         content="Resume"
         linkProps={{ href: "#", onClick: handleCloseMenu }}
       />
-      <Link href="mailto:inqueries@martymitchell.dev">
+      <Link href={`mailto:${CONTACT_EMAIL}`}>
         <Button variant="small">Contact</Button>
       </Link>
     </>

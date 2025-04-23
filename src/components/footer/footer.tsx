@@ -7,6 +7,7 @@ import {
   DiscordIcon,
   LinkedinIcon,
 } from "../icons";
+import { CONTACT_EMAIL } from "@/app/globals";
 
 type FooterNavProps = {
   items: InteractiveTextLinkProps[];
@@ -81,7 +82,7 @@ export function Footer() {
             title="Contact"
             items={[
               {
-                linkProps: { href: "mailto:inqueries@martymitchell.dev" },
+                linkProps: { href: `mailto:${CONTACT_EMAIL}` },
                 content: "Email",
               },
             ]}
