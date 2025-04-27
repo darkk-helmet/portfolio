@@ -9,7 +9,7 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const position = window.pageYOffset;
+      const position = window.scrollY;
       setScrollPosition(position);
     }
 
