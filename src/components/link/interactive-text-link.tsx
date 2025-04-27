@@ -5,6 +5,7 @@ import { ComponentType, SVGProps } from "react";
 export type InteractiveTextLinkProps = {
   content: string;
   EndIcon?: ComponentType<SVGProps<SVGSVGElement>>;
+  isExternal?: boolean;
   linkProps: React.ComponentProps<typeof Link>;
   StartIcon?: ComponentType<SVGProps<SVGSVGElement>>;
   variant?: TextProps["variant"];
@@ -13,6 +14,7 @@ export type InteractiveTextLinkProps = {
 export function InteractiveTextLink({
   content,
   EndIcon,
+  isExternal,
   linkProps,
   StartIcon,
   variant,
@@ -20,6 +22,7 @@ export function InteractiveTextLink({
   return (
     <Link
       className="flex flex-row gap-2 text-gray-400 hover:text-foreground transition-all duration-300 w-fit"
+      {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       {...linkProps}
     >
       {!!StartIcon && <StartIcon className="self-center w-5 h-5" />}
