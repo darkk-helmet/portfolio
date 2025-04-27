@@ -25,7 +25,7 @@ export default function Home() {
             <Text className="inline" variant="h3">
               Hey there! I{"'"}m{" "}
               <p className="inline text-lavender-400">Marty Mitchell,</p> a full
-              stack software engineer based out of southern California.
+              stack software engineer based out of Southern California.
             </Text>
             <Text className="text-gray-400" variant="body1">
               I{"'"}m skilled in designing and building web applications from
