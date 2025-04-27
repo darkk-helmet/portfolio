@@ -3,7 +3,7 @@ import { Button, IconButton } from "../button";
 import { InteractiveTextLink } from "../link";
 import { CloseIcon, MenuIcon } from "../icons";
 import { useCallback, useEffect, useState } from "react";
-import { CONTACT_EMAIL, RESUME_URL } from "@/app/globals";
+import { URLS } from "@/app/globals";
 
 export function NavItems() {
   const [darkenBg, setDarkenBg] = useState(false);
@@ -41,25 +41,25 @@ export function NavItems() {
     <>
       <InteractiveTextLink
         content="Home"
-        linkProps={{ href: "#home", onClick: handleCloseMenu }}
+        linkProps={{ href: URLS.local.home, onClick: handleCloseMenu }}
       />
       <InteractiveTextLink
         content="Experience"
-        linkProps={{ href: "#experience", onClick: handleCloseMenu }}
+        linkProps={{ href: URLS.local.experience, onClick: handleCloseMenu }}
       />
       <InteractiveTextLink
         content="Projects"
-        linkProps={{ href: "#projects", onClick: handleCloseMenu }}
+        linkProps={{ href: URLS.local.projects, onClick: handleCloseMenu }}
       />
       <InteractiveTextLink
         isExternal
         content="Resume"
         linkProps={{
-          href: RESUME_URL,
+          href: URLS.external.resume,
           onClick: handleCloseMenu,
         }}
       />
-      <Link href={`mailto:${CONTACT_EMAIL}`}>
+      <Link href={URLS.external.email}>
         <Button variant="small">Contact</Button>
       </Link>
     </>

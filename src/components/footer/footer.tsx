@@ -7,7 +7,7 @@ import {
   DiscordIcon,
   LinkedinIcon,
 } from "../icons";
-import { CONTACT_EMAIL, RESUME_URL } from "@/app/globals";
+import { URLS } from "@/app/globals";
 
 type FooterNavProps = {
   items: InteractiveTextLinkProps[];
@@ -45,12 +45,12 @@ export function Footer() {
           <FooterNav
             title="Explore"
             items={[
-              { linkProps: { href: "#home" }, content: "Home" },
-              { linkProps: { href: "#experience" }, content: "Experience" },
-              { linkProps: { href: "#projects" }, content: "Projects" },
+              { linkProps: { href: URLS.local.home }, content: "Home" },
+              { linkProps: { href: URLS.local.experience }, content: "Experience" },
+              { linkProps: { href: URLS.local.projects }, content: "Projects" },
               {
                 linkProps: {
-                  href: RESUME_URL,
+                  href: URLS.external.resume,
                 },
                 isExternal: true,
                 content: "Resume",
@@ -63,7 +63,7 @@ export function Footer() {
             items={[
               {
                 linkProps: {
-                  href: "https://github.com/darkk-helmet",
+                  href: URLS.external.github,
                 },
                 isExternal: true,
                 content: "Github",
@@ -71,14 +71,14 @@ export function Footer() {
               },
               {
                 linkProps: {
-                  href: "https://www.linkedin.com/in/marty-mitchell/",
+                  href: URLS.external.linkedin,
                 },
                 isExternal: true,
                 content: "LinkedIn",
                 StartIcon: LinkedinIcon,
               },
               {
-                linkProps: { href: "https://discord.gg/kFP6dMfD" },
+                linkProps: { href: URLS.external.discord },
                 isExternal: true,
                 content: "Discord",
                 StartIcon: DiscordIcon,
@@ -89,7 +89,7 @@ export function Footer() {
             title="Contact"
             items={[
               {
-                linkProps: { href: `mailto:${CONTACT_EMAIL}` },
+                linkProps: { href: URLS.external.email },
                 content: "Email",
               },
             ]}

@@ -1,3 +1,4 @@
+import { URLS } from "@/app/globals";
 import { Badge } from "@/components/badge/badge";
 import { Hover } from "@/components/hover/hover";
 import {
@@ -92,7 +93,7 @@ export function ProjectsSection() {
           subtitle={
             <Text variant="body2">
               Created at{" "}
-              <Link href="#calwest" className="underline">
+              <Link href={URLS.local.calwest} className="underline">
                 CalWest Manufacturing
               </Link>
             </Text>
@@ -178,7 +179,7 @@ export function ProjectsSection() {
           subtitle={
             <Text variant="body2">
               Created at{" "}
-              <Link href="#calwest" className="underline">
+              <Link href={URLS.local.calwest} className="underline">
                 LSK Suspension
               </Link>
             </Text>

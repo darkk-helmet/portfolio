@@ -6,7 +6,7 @@ import { ExperienceSection } from "@/sections/home/experience";
 import { ProjectsSection } from "@/sections/home/projects";
 import Image from "next/image";
 import Link from "next/link";
-import { CONTACT_EMAIL } from "./globals";
+import { URLS } from "./globals";
 
 export default function Home() {
   return (
@@ -34,26 +34,26 @@ export default function Home() {
             </Text>
           </div>
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center h-16">
-            <Link className="w-56 md:w-64" href={`mailto:${CONTACT_EMAIL}`}>
+            <Link className="w-56 md:w-64" href={URLS.external.email}>
               <Button className="inline w-full">Send me a message</Button>
             </Link>
             <div className="hidden md:inline w-[1px] h-full bg-gray-600" />
             <div className="flex flex-row gap-6">
               <div className="w-7 h-7 md:w-8 md:h-8">
                 <IconLink
-                  href="https://github.com/darkk-helmet"
+                  href={URLS.external.github}
                   Icon={GithubIcon}
                 />
               </div>
               <div className="w-7 h-7 md:w-8 md:h-8">
                 <IconLink
-                  href="https://www.linkedin.com/in/marty-mitchell/"
+                  href={URLS.external.linkedin}
                   Icon={LinkedinIcon}
                 />
               </div>
               <div className="w-7 h-7 md:w-8 md:h-8">
                 <IconLink
-                  href="https://discord.gg/kFP6dMfD"
+                  href={URLS.external.discord}
                   Icon={DiscordIcon}
                 />
               </div>
