@@ -7,7 +7,7 @@ import {
   DiscordIcon,
   LinkedinIcon,
 } from "../icons";
-import { CONTACT_EMAIL } from "@/app/globals";
+import { CONTACT_EMAIL, RESUME_URL } from "@/app/globals";
 
 type FooterNavProps = {
   items: InteractiveTextLinkProps[];
@@ -24,6 +24,7 @@ function FooterNav({ items, title }: FooterNavProps) {
         <InteractiveTextLink
           key={item.content}
           content={item.content}
+          isExternal={item.isExternal}
           EndIcon={item.EndIcon}
           StartIcon={item.StartIcon}
           linkProps={item.linkProps}
@@ -48,7 +49,10 @@ export function Footer() {
               { linkProps: { href: "#experience" }, content: "Experience" },
               { linkProps: { href: "#projects" }, content: "Projects" },
               {
-                linkProps: { href: "#projects" },
+                linkProps: {
+                  href: RESUME_URL,
+                },
+                isExternal: true,
                 content: "Resume",
                 EndIcon: ExternalLinkIcon,
               },
@@ -61,6 +65,7 @@ export function Footer() {
                 linkProps: {
                   href: "https://github.com/darkk-helmet",
                 },
+                isExternal: true,
                 content: "Github",
                 StartIcon: GithubIcon,
               },
@@ -68,11 +73,13 @@ export function Footer() {
                 linkProps: {
                   href: "https://www.linkedin.com/in/marty-mitchell/",
                 },
+                isExternal: true,
                 content: "LinkedIn",
                 StartIcon: LinkedinIcon,
               },
               {
                 linkProps: { href: "https://discord.gg/kFP6dMfD" },
+                isExternal: true,
                 content: "Discord",
                 StartIcon: DiscordIcon,
               },
