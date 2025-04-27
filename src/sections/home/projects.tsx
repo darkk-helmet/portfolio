@@ -1,4 +1,5 @@
 import { Badge } from "@/components/badge/badge";
+import { Hover } from "@/components/hover/hover";
 import {
   AmazonCognitoIcon,
   Auth0Icon,
@@ -31,7 +32,7 @@ export function ProjectsSection() {
       >
         Projects
       </Text>
-      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-16 justify-center">
+      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-16 justify-center mb-4">
         <ProjectCard
           imgSrc="/projects/portfolio-1.webp"
           title="Portfolio"
@@ -98,12 +99,16 @@ export function ProjectsSection() {
           }
           iconLinks={
             <div className="flex flex-row gap-4">
-              <Badge className="text-yellow-400" position="bottom-right">
-                <WorldWideWebIcon className="text-gray-500 w-6 h-6" />
-              </Badge>
-              <Badge className="text-yellow-400" position="bottom-right">
-                <GithubIcon className="text-gray-500 w-6 h-6" />
-              </Badge>
+              <Hover content="Private">
+                <Badge className="text-yellow-400" position="bottom-right">
+                  <WorldWideWebIcon className="text-gray-500 w-6 h-6" />
+                </Badge>
+              </Hover>
+              <Hover content="Private">
+                <Badge className="text-yellow-400" position="bottom-right">
+                  <GithubIcon className="text-gray-500 w-6 h-6" />
+                </Badge>
+              </Hover>
             </div>
           }
           techStacks={[
@@ -185,9 +190,11 @@ export function ProjectsSection() {
                 href="https://lsksuspension.com/"
                 Icon={WorldWideWebIcon}
               />
-              <Badge className="text-yellow-400" position="bottom-right">
-                <GithubIcon className="text-gray-500 w-6 h-6" />
-              </Badge>
+              <Hover content="Private">
+                <Badge className="text-yellow-400" position="bottom-right">
+                  <GithubIcon className="text-gray-500 w-6 h-6" />
+                </Badge>
+              </Hover>
             </div>
           }
           techStacks={[
