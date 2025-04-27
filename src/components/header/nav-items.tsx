@@ -52,8 +52,12 @@ export function NavItems() {
         linkProps={{ href: "#projects", onClick: handleCloseMenu }}
       />
       <InteractiveTextLink
+        isExternal
         content="Resume"
-        linkProps={{ href: "#", onClick: handleCloseMenu }}
+        linkProps={{
+          href: "https://marty-personal.s3.us-west-1.amazonaws.com/portfolio/Resume.pdf",
+          onClick: handleCloseMenu,
+        }}
       />
       <Link href={`mailto:${CONTACT_EMAIL}`}>
         <Button variant="small">Contact</Button>
