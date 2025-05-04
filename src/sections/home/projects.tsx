@@ -26,7 +26,7 @@ import Link from "next/link";
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="flex flex-col gap-6 scroll-mt-[102px]">
+    <section id="projects" className="flex flex-col gap-6 scroll-mt-12 md:scroll-mt-[102px]">
       <Text
         className="w-fit pb-2 border-b-4 border-lavender-500 mb-8"
         variant="h2"

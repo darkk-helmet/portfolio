@@ -23,10 +23,10 @@ export default function RootLayout({
   return (
     <html className="dark h-full" lang="en" style={{ scrollBehavior: "smooth" }}>
       <body className={`${poppins.variable} antialiased bg-background`}>
-        <div id="home" className="font-[family-name:var(--font-poppins)] scroll-mt-[102px]">
+        <div id="home" className="font-[family-name:var(--font-poppins)] scroll-mt-12 md:scroll-mt-[102px]">
           <Header />
           <div
-            className={`max-w-screen-2xl mx-auto px-6 md:px-12 pt-24 pb-64 mt-[102px] h-full`}
+            className={`max-w-screen-2xl mx-auto px-6 md:px-12 pt-24 pb-64 mt-12 md:mt-[102px] h-full`}
           >
             {children}
           </div>

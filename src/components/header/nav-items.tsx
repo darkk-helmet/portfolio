@@ -68,9 +68,9 @@ export function NavItems() {
   return (
     <>
       <nav className="hidden md:flex gap-8 flex-row items-center">{links}</nav>
-      <div className="flex md:hidden h-[36px] items-center">
+      <div className="flex md:hidden h-[24px] items-center">
         <IconButton
-          className="w-6 h-6"
+          className="w-5 h-5"
           Icon={MenuIcon}
           iconProps={{
             onClick: handleOpenMenu,
@@ -94,7 +94,7 @@ export function NavItems() {
           className={`basis-0 flex-grow h-full max-w-60 flex flex-col gap-4 z-10 bg-background px-6 py-8 border-l-2 border-lavender-500`}
         >
           <IconButton
-            className="self-end w-6 h-6"
+            className="self-end w-5 h-5"
             Icon={CloseIcon}
             iconProps={{
               onClick: handleCloseMenu,

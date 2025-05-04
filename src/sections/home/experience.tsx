@@ -3,7 +3,7 @@ import { Text } from "@/components/text";
 
 export function ExperienceSection() {
   return (
-    <section id="experience" className="flex flex-col gap-6 scroll-mt-[102px]">
+    <section id="experience" className="flex flex-col gap-6 scroll-mt-12 md:scroll-mt-[102px]">
       <Text
         className="w-fit pb-2 border-b-4 border-lavender-500 mb-8"
         variant="h2"
@@ -17,7 +17,7 @@ export function ExperienceSection() {
             <div className="h-[22.08px] md:h-[26.49px] flex justify-center items-center">
               <CircleIcon width={12} height={12} />
             </div>
-            <div id="calwest" className="scroll-mt-[102px]">
+            <div id="calwest" className="scroll-mt-12 md:scroll-mt-[102px]">
               <Text variant="h5">CalWest Manufacturing & LSK Suspension</Text>
               <Text className="!font-semibold mb-2" variant="body1">
                 Full Stack Software Engineer
