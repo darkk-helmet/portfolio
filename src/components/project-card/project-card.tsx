@@ -5,7 +5,6 @@ import { ReactNode } from "react";
 type StackSectionItem = {
   icon: ReactNode;
   title: string;
-  subtitle?: string;
 };
 
 type TechStackSectionProps = {
